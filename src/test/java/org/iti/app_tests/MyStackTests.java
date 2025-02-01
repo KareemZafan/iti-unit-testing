@@ -59,7 +59,7 @@ public class MyStackTests {
         assertEquals("Stack is empty!", ex.getMessage(), "Exception message is not the same");
 
         ex = assertThrowsExactly(IllegalStateException.class, () -> myStack.getPeek());
-        assertNotEquals("Stack is empty!", ex.getMessage(), "Exception message is not the same");
+        assertEquals("Stack is empty!", ex.getMessage(), "Exception message is not the same");
 
 
         myStack.push(100);
